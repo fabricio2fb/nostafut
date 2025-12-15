@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- 
+        SEGURANÇA: Esta tag diz ao Google e outros buscadores 
+        para NÃO mostrar essa página nos resultados de pesquisa. 
+    -->
+    <meta name="robots" content="noindex, nofollow">
+
+    <title>Obrigado pela sua compra! - NostalgiaFut</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* ... existing CSS code ... */
+        /* Reset básico */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #020617; 
+            background-image: 
+                linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+            background-size: 40px 40px;
+            color: #f3f4f6;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            padding: 20px;
+            position: relative;
+        }
+
+        body::before {
+            content: '';
+            position: absolute;
+            top: -10%;
+            right: -10%;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(37, 99, 235, 0.15) 0%, rgba(2, 6, 23, 0) 70%);
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        .card {
+            background-color: #0f172a;
+            width: 100%;
+            max-width: 500px;
+            padding: 48px;
+            border-radius: 16px;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5), 0 10px 10px -5px rgba(0, 0, 0, 0.4);
+            border: 1px solid #1e293b;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .logo-container {
+            margin-bottom: 24px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo-img {
+            max-height: 50px;
+            width: auto;
+            display: block;
+        }
+        
+        .logo-text {
+            font-size: 26px;
+            font-weight: 700;
+            color: #ffffff;
+            letter-spacing: -0.5px;
+        }
+        
+        .success-icon {
+            width: 72px;
+            height: 72px;
+            background-color: rgba(34, 197, 94, 0.1);
+            color: #4ade80;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 24px auto;
+            border: 1px solid rgba(74, 222, 128, 0.2);
+            box-shadow: 0 0 20px rgba(74, 222, 128, 0.2);
+        }
+        .success-icon svg {
+            width: 36px;
+            height: 36px;
+        }
+
+        h1 {
+            font-size: 28px;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 12px;
+            letter-spacing: -0.025em;
+        }
+
+        p {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #94a3b8;
+            margin-bottom: 32px;
+        }
+
+        .file-info {
+            background-color: #1e293b;
+            border: 1px solid #334155;
+            border-radius: 12px;
+            padding: 16px;
+            margin-bottom: 32px;
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            text-align: left;
+        }
+
+        .file-icon {
+            font-size: 24px;
+            background: #0f172a;
+            width: 48px;
+            height: 48px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 8px;
+            color: #60a5fa;
+        }
+
+        .file-details {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .file-name {
+            font-weight: 600;
+            font-size: 15px;
+            color: #f8fafc;
+        }
+
+        .file-status {
+            font-size: 13px;
+            color: #4ade80;
+            font-weight: 500;
+            margin-top: 2px;
+        }
+
+        .btn-download {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            padding: 18px 24px;
+            background-color: #3b82f6; 
+            color: white;
+            font-weight: 600;
+            font-size: 16px;
+            border-radius: 10px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 0 15px rgba(59, 130, 246, 0.4);
+            gap: 12px;
+            cursor: pointer;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .btn-download:hover {
+            background-color: #2563eb;
+            transform: translateY(-2px);
+            box-shadow: 0 0 25px rgba(59, 130, 246, 0.6);
+        }
+
+        .btn-download:active {
+            transform: translateY(0);
+        }
+
+        .footer-support {
+            margin-top: 28px;
+            font-size: 14px;
+            color: #64748b;
+        }
+        
+        .footer-support a {
+            color: #94a3b8;
+            text-decoration: none;
+            border-bottom: 1px solid #94a3b8;
+            padding-bottom: 1px;
+            transition: color 0.2s;
+        }
+        
+        .footer-support a:hover {
+            color: #fff;
+            border-color: #fff;
+        }
+
+        @media (max-width: 480px) {
+            .card {
+                padding: 32px 20px;
+                background-color: #0f172a;
+                border: none;
+            }
+            body {
+                padding: 0;
+                background-color: #0f172a;
+                background-image: none;
+            }
+            .btn-download {
+                padding: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <!-- ÁREA DA LOGO -->
+        <div class="logo-container">
+            <img src="https://i.postimg.cc/rmdm1yj2/Gemini-Generated-Image-qcdijwqcdijwqcdi-removebg-preview.png" alt="NostalgiaFut" class="logo-img">
+            <span class="logo-text">NostalgiaFut</span>
+        </div>
+
+        <div class="success-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+            </svg>
+        </div>
+
+        <h1>Compra Confirmada!</h1>
+        
+        <p>
+            Obrigado por comprar na <strong>NostalgiaFut</strong>. <br>
+            Seu produto digital já está pronto para download.
+        </p>
+
+        <!-- Detalhes do Arquivo -->
+        <div class="file-info">
+            <div class="file-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                </svg>
+            </div>
+            <div class="file-details">
+                <!-- 
+                    EDITAR PARA CADA PRODUTO: 
+                    Altere o nome do arquivo abaixo (ex: Camisa_Retro_1994.zip)
+                -->
+                <span class="file-name">FIFA 07 PS2</span>
+                <span class="file-status">✓ Link Seguro e Direto</span>
+            </div>
+        </div>
+
+        <!-- 
+            LINK DE DOWNLOAD (O MAIS IMPORTANTE):
+            1. Cole o link do Bunny.net no href=""
+            2. Salve este arquivo com um nome ALEATÓRIO E DIFÍCIL.
+               Exemplo: "obrigado-x9js-2k1m.html"
+            3. Use esse nome difícil na configuração da sua plataforma de pagamento.
+        -->
+        <a href="https://videosimulafunil.b-cdn.net/ps2/FIFA%2007%20(Europe)%20(EsPt).zip" class="btn-download" id="downloadBtn" download>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+            </svg>
+            <span id="btnText">Baixar Agora</span>
+        </a>
+
+        <div class="footer-support">
+            Dúvidas? <a href="#">Fale conosco no WhatsApp</a>
+        </div>
+    </div>
+
+    <!-- Script opcional para evitar clique direito (segurança simples) -->
+    <script>
+        document.addEventListener('contextmenu', event => event.preventDefault());
+        document.onkeydown = function(e) {
+            if(e.keyCode == 123) { return false; }
+            if(e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) { return false; }
+            if(e.ctrlKey && e.shiftKey && e.keyCode == 'C'.charCodeAt(0)) { return false; }
+            if(e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)) { return false; }
+            if(e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) { return false; }
+        }
+    </script>
+
+</body>
+</html>
